@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./font/themify-icons/themify-icons.css">
+    <link rel="icon" href="img/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./font/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+    <title>Đặt vé Show BlackBink</title>
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <!-- Bắt đầu menu -->
+            <ul class="nav">
+                <li><a href="#"><i class="ti-home"></i> Trang chủ</a></li>
+                <li><a href="#bank"><i class="ti-user"></i> Thông tin</a></li>
+                <li><a href="#tour"><i class="ti-location-pin"></i> Show</a></li>
+                <li><a href="#show"><i class="ti-headphone"></i> Liên hệ</a></li>
+                <li>
+                    <a href="#">
+                        Khác
+                        <i class="nav-arrow-down ti-angle-double-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="https://vi.wikipedia.org/wiki/Jennie_(ca_s%C4%A9)" target="_blank">Jennie-Rap</a>
+                        </li>
+                        <li><a href="https://vi.wikipedia.org/wiki/Ros%C3%A9_(ca_s%C4%A9)" target="_blank">Rosé-Nhảy</a>
+                        </li>
+                        <li><a href="https://vi.wikipedia.org/wiki/Jisoo" target="_blank">Jisoo-Hát</a></li>
+                        <li><a href="https://vi.wikipedia.org/wiki/Lisa_(rapper)" target="_blank">Lisa-Rap</a></li>
+    
+                    </ul>
+                </li>
+            </ul>
+    
+            <label for="nav-mobile-input" class="mobile-menu">
+                <i class="menu-icon fa-solid fa-bars"></i>
+            </label>
+            <!-- hiddn:ẩn thẻ iput đi -->
+            <input type="checkbox" hidden ="" class="nav-input" id="nav-mobile-input">
+    
+            <label for="nav-mobile-input"class="nav__overlay"></label>
+    
+            <div class="nav-mobile">
+                <label for="nav-mobile-input" class="nav-mobile-close"><i class="fa-solid fa-x"></i></label>
+                <ul class="nav-mobile-list">
+                    <li><a href="#"><i class="ti-home"></i> Trang chủ</a></li>
+                    <li><a href="#bank"><i class="ti-user"></i> Thông tin</a></li>
+                    <li><a href="#tour"><i class="ti-location-pin"></i> Show</a></li>
+                    <li><a href="#show"><i class="ti-headphone"></i> Liên hệ</a></li>
+                    <li>
+                        <a href="#">
+                            Khác
+                            <i class="nav-arrow-down ti-angle-double-down"></i>
+                        </a>
+                        <ul class="subnav-mobile">
+                            <li><a href="https://vi.wikipedia.org/wiki/Jennie_(ca_s%C4%A9)" target="_blank">Jennie-Rap</a>
+                            </li>
+                            <li><a href="https://vi.wikipedia.org/wiki/Ros%C3%A9_(ca_s%C4%A9)" target="_blank">Rosé-Nhảy</a>
+                            </li>
+                            <li><a href="https://vi.wikipedia.org/wiki/Jisoo" target="_blank">Jisoo-Hát</a></li>
+                            <li><a href="https://vi.wikipedia.org/wiki/Lisa_(rapper)" target="_blank">Lisa-Rap</a></li>
+        
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="slide">
+                <img src="/img/slider1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="/img/slider2.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="/img/slider3.jpg" alt="Slide 3">
+            </div>
+
+            <div class="text-content">
+                <h2 class="text-heading">BlackBink</h2>
+                <div class="text-des">Trình diễn tại Việt Nam vào cuối tháng 7</div>
+            </div>
+        </div>
+        <script>
+            const slideshowContainers = document.querySelectorAll('.slideshow-container');
+
+            slideshowContainers.forEach((slideshowContainer) => {
+                const slides = slideshowContainer.querySelectorAll('.slide');
+                let currentSlide = 0;
+
+                function showSlide(slideIndex) {
+                    slides.forEach((slide, index) => {
+                        if (index === slideIndex) {
+                            slide.classList.add('active');
+                        } else {
+                            slide.classList.remove('active');
+                        }
+                    });
+                }
+
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    showSlide(currentSlide);
+                }
+
+                function previousSlide() {
+                    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                    showSlide(currentSlide);
+                }
+
+                showSlide(currentSlide);
+                setInterval(nextSlide, 3000);
+            });
+        </script>
+        <!-- ======================================================= -->
+
+
+        <div id="content">
+            <!-- THE BANK -->
+            <div class="contert-section" id="bank">
+                <h2 class="section-heading">NHÓM NHẠC BLACKBINL</h2>
+                <p class="section-sub-heading">Thông tin chung</p>
+                <p class="about--text">
+                    Blackpink được lên kế hoạch thành lập khi YG Entertainment tổ chức các buổi tuyển chọn những tân
+                    binh thuộc lứa tuổi vị thành niên và thanh thiếu niên trên toàn thế giới để thành lập một nhóm nhạc
+                    nữ mới sau khi nhóm nhạc nữ đầu tiên, 2NE1, ra mắt hồi năm 2009.[20][21] Theo các thành viên, việc
+                    tham gia YG với tư cách thực tập sinh tương tự như việc ghi danh vào một học viện ngôi sao nhạc pop
+                    làm việc cả ngày. Jennie cho rằng nó "nghiêm ngặt hơn cả trường học" trong khi Rosé so sánh cuộc
+                    sống tại YG như The X Factor với phòng ký túc xá.[22] Đối với những thành viên phải bỏ lại cuộc sống
+                    ở nước ngoài để tới Hàn Quốc, họ đối mặt với vô vàn gian nan khi phải thích nghi với nhịp độ luyện
+                    tập cùng với những cú sốc văn hóa.[23] Công tác chuẩn bị cho Blackpink ra mắt bắt đầu từ năm 2011
+                    khi YG
+                </p>
+                <div class="members-list">
+                    <div class="member-itemm members-item">
+                        <p class="member-name">Jisoo<br>
+                            Tiếng Hàn: 김지수<br>
+                            Sinh ngày 3 tháng 1 năm 1995
+                        </p>
+                        <img src="/img/jisoo.jpg" alt="" class="member-img">
+                    </div>
+
+                    <div class="member-itemm members-item">
+                        <p class="member-name">Rosé<br>
+                            Tiếng Hàn: 박채영<br>
+                            Sinh ngày 11 tháng 2 năm 1997
+                        </p>
+                        <img src="/img/rose.jpg" alt="" class="member-img">
+                    </div>
+
+                    <div class="member-itemm members-item">
+                        <p class="member-name">Jennie<br>
+                            Tiếng Hàn: 김제니<br>
+                            Sinh ngày 16 tháng 1 năm 1996
+                        </p>
+                        <img src="/img/jennie.jpg" alt="" class="member-img">
+                    </div>
+
+                    <div class="member-itemm members-item">
+                        <p class="member-name">Lisa(Thái Lan)<br>
+                            tiếng Hàn ; 리사<br>
+                            f Sinh ngày 27 tháng 3 năm 1997
+                        </p>
+                        <img src="/img/lisa.jpg" alt="" class="member-img">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+            </div>
+            <!-- TOUR -->
+            <div class="tour-section" id="tour">
+                <div class="contert-section">
+                    <h2 class="section-heading text-white">NGÀY TRÌNH DIỄN</h2>
+                    <p class="section-sub-heading text-white">Nhớ đặt vế bạn nhé</p>
+                    <!-- <ul class="tickets-list">
+                        <li>Hà Nội <span class="Sold-out">Hết vé</span></li>
+                        <li>Tp.HCM <span class="Sold-out">Hết vé</span></li>
+                        <li>Đà Nẵng <span class="soluong">3</span></li>
+                    </ul> -->
+
+
+                    <table class="tickets-list" width="100%" border="1" cellspacing="0" cellpadding="2">
+                        <tr>
+                            <td rowspan="2" style="font-weight: bold;"> Ngày diễn</td>
+                            <td rowspan="2" style="font-weight: bold;"> Địa điểm</td>
+                            <td colspan="2" style="font-weight: bold;"> Giá vé</td>
+                            <td rowspan="2" style="font-weight: bold;">Trạng thái</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Thường</td>
+                            <td style="font-weight: bold;">Vip</td>
+                        </tr>
+                        <tr>
+                            <td>27/07/2023</td>
+                            <td>Đà Nắng</td>
+                            <td>500.000<sup>đ</sup></td>
+                            <td>1.900.000<sup>đ</sup></td>
+                            <td>9 vé</td>
+                        </tr>
+                        <tr>
+                            <td>29/07/2023</td>
+                            <td>Tp.Hồ Chí Minh</td>
+                            <td>700.000<sup>đ</sup></td>
+                            <td>2.100.000<sup>đ</sup></td>
+                            <td><span class="Sold-out">Hết vé</span></td>
+                        </tr>
+                        <tr>
+                            <td>31/07/2023</td>
+                            <td>Thủ Đô Hà Nội</td>
+                            <td>800.000<sup>đ</sup></td>
+                            <td>2.400.000<sup>đ</sup></td>
+                            <td><span class="Sold-out">Hết vé</span></td>
+                        </tr>
+                    </table>
+
+                    <!-- địa điểm -->
+                    <div class="places-list" id="">
+                        <div class="place-item">
+                            <img src="./img/hanoi.jpg" alt="" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">Hà Nội</h3>
+                                <p class="place-time">18h-31/7/2023</p>
+                                <p class="place-desc">Show trình diễn được tổ chức tại sân vận động quốc gia Mỹ Đình</p>
+                                <button class="place-buy-btn js-buy-ticket">Đặt vé</button>
+                            </div>
+                        </div>
+
+                        <div class="place-item">
+                            <img src="./img/tphcm.jpg" alt="" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">Tp. Hồ Chí Minh</h3>
+                                <p class="place-time">18h-29/7/2023</p>
+                                <p class="place-desc">Show trình diễn được tổ chức tại phố đi bộ Nguyễn Huệ</p>
+                                <button class="place-buy-btn js-buy-ticket">Đặt vé</button>
+                            </div>
+                        </div>
+
+                        <div class="place-item">
+                            <img src="./img/danang.jpg" alt="" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">Đà Nắng</h3>
+                                <p class="place-time">18h-27/7/2023</p>
+                                <p class="place-desc">Show trình diễn được tổ chức tại công viên bự chà bá</p>
+                                <button class="place-buy-btn js-buy-ticket">Đặt vé</button>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- CONTACT -->
+            <div class="contert-section" id="show">
+                <h2 class="section-heading">LIÊN HỆ</h2>
+                <p class="section-sub-heading">Liên hệ với bạn bằng cách nào?</p>
+
+                <div class="contert-infos">
+                    <div class="contert-item its">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.304920895984!2d105.761397975129!3d21.02048198062674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454a15b9aeb8d%3A0x84ec0f4d29a7ab36!2zU8OibiB24bqtbiDEkeG7mW5nIFF14buRYyBnaWEgTeG7uSDEkMOsbmg!5e0!3m2!1svi!2s!4v1688179769191!5m2!1svi!2s"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="contert-item its">
+                        <form action="">
+                            <label class="modal-label" for="">
+                                <i class="fa-solid fa-user"></i>
+                                Họ và Tên:
+                            </label>
+                            <input type="text" class="modal-input" placeholder="Họ và tên" required>
+
+                            <label class="modal-label" for="">
+                                <i class="fa-solid fa-envelope"></i>
+                                Gmail:
+                            </label>
+                            <input type="email" class="modal-input" placeholder="Gmail" required>
+
+                            <label class="modal-label" for="">
+                                <i class="fa-solid fa-pen"></i>
+                                Nội dung:
+                            </label>
+                            <textarea class="modal-input" placeholder="Nội dung" required></textarea>
+                            <button id="send">Gửi</button>
+                        </form>
+
+                    </div>
+                </div>
+
+
+                <div class="clear"></div>
+            </div>
+
+            <div class="map-section">
+                <img src="./img/showbl.jpg" alt="" width="100%" height="790px">
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="contert-section">
+                <!-- <div class="information">
+                    <img src="./img/logo.png" alt="">
+                </div> -->
+                <div class="contert-infos">
+                    <div class="footer-item">
+                        <img src="./img/logo.png" alt="">
+                    </div>
+                    <div class="footer-item left">
+                        Địa chỉ: Dưỡng Điềm- CT-Tiền Giang<br>
+                        Tel: <a href="tel:0925506435">0925506435</a><br>
+                        E-mail: <a href="mailto:nhi021101029@tgu.edu.vn">nhi021101029@tgu.edu.vn</a><br>
+                        Liên hệ hỗ trợ: Mrs. Nhi
+                    </div>
+                    <div class="footer-item right">
+                        <a href="https://www.facebook.com/truongmyanh23412?mibextid=ZbWKwL" target="_blank"><i
+                                class="ti-facebook"></i></a>
+                        <a href="https://vm.tiktok.com/ZM2ae3Q8T/?zarsrc=1303&utm_source=zalo&utm_medium=zalo&utm_campaign=zalo"
+                            target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://instagram.com/chi.duong132?igshid=MzNlNGNkZWQ4Mg==" target="_blank"><i
+                                class="ti-instagram"></i></a>
+                        <a href="mailto:nhi021101029@tgu.edu.vn"><i class="ti-google"></i></a>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-container">
+            <div class="close">
+                <i class="ti-close"></i>
+            </div>
+            <header class="modal-header">
+                Đặt vé
+                <i class="fa-solid fa-ticket fa-rotate-90"></i>
+            </header>
+
+            <div class="modal-body">
+                <label class="modal-label" for="">
+                    <i class="fa-solid fa-user"></i>
+                    Họ và Tên:
+                </label>
+                <input type="text" class="modal-input" placeholder="Họ và tên">
+
+                <label class="modal-label" for="">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    Só điện thoại:
+                </label>
+                <input type="tel" class="modal-input" placeholder="Số điện thoại">
+
+                <label class="modal-label" for="">
+                    <i class="fa-solid fa-envelope"></i>
+                    Gmail:
+                </label>
+                <input type="email" class="modal-input" placeholder="Gmail">
+
+                <label class="modal-label" for="">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Địa chỉ:
+                </label>
+                <input type="text" class="modal-input" placeholder="Địa chỉ">
+
+                <!-- <label class="modal-label"for="">
+                    Loại vé: 
+                </label> -->Loại vé:
+                <input type="radio" name="thuong" value="Thuong">Thường
+                <input type="radio" name="vip" value="Vip">Vip
+
+                <label class="modal-label" for="">
+                    <i class="fa-solid fa-arrow-down-1-9"></i>
+                    Số lượng:
+                </label>
+                <input type="tel" class="modal-input" placeholder="Số lượng">
+
+                <button id="buy">Đặt vé</button>
+
+            </div>
+
+            <footer class="help-close">
+                <p class="help">Trợ giúp <a href="#">Help</a></p>
+            </footer>
+        </div>
+    </div>
+    <!-- Mua vé -->
+    <script>
+        // const:là hằng
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.modal')
+        const modalContainer = document.querySelector('.modal-container')
+        const close = document.querySelector('.close')
+        //hàm hiển thị mua vé (thêm class open vào modal)
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+        //hàm ẩn mua vé (xóa class open ra khỏi modal)
+        function hideBuyTickets() {
+            modal.classList.remove('open')
+        }
+        //tạo biến mới bybtn lưu lần lượng 3 nút vòng lặp chạy 3 lần vì có 3 nút
+        for (const buyBtn of buyBtns) {
+            //lắng nghe hành vi click
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+        close.addEventListener('click', hideBuyTickets)
+        modal.addEventListener('click', hideBuyTickets)
+        modalContainer.addEventListener('click', function (event) {
+            //ngưng sự kiện nổ bọt của modalContainer nghĩa là khi click vào trong modalContainer
+            //thì nó sẽ không bị đóng lại nữa
+            event.stopPropagation()
+        })
+    </script>
+
+    <!-- menu của mobile -->
+    <script>
+        //getElementById: lấy id
+        var header =document.getElementById('header')
+        var mobileMenu =document.getElementById('Mobile-Menu')
+        var headHeight=header.clientHeight
+        var headerClosed =document.getElementById('Mobile-Menu-closed')
+         //đóng ởm menu
+        mobileMenu.onclick=function(){
+            var isClosed = header.clientHeight === headHeight
+            if(isClosed){
+                header.style.height = 'auto'
+                // mobileMenu.style.display='none'
+                // headerClosed.style.display='block'
+            }
+            else{
+                header.style.height = null
+                mobileMenu.style.display='block'
+                headerClosed.style.display='none'
+            }
+        }
+
+        //đóng menu khi chọn vào menu
+        var menuItems =document.querySelectorAll('.nav-mobile-list li a[href *="#"]')
+        for(var i = 0; i < menuItems.length; i++){
+            var menuItem = menuItems[i]
+            //nextElementSibling: anh chị em liền kề
+            //classList: lấy ra cái thẻ chứa cái class tên đó
+            // console.log(menuItem)
+            
+            menuItem.onclick=function(event){
+                var isParentMenu = this.nextElementSibling && menuItem.nextElementSibling.classList.contains('subnav-mobile')
+                if(isParentMenu)
+                {
+                    event.preventDefault()
+                    //nêu nó có menu con thì bỏ qua hành vi mặt đinh là khi bấm vào nút khác nó sẽ không rè sét lại trang nữa
+                }else{
+                    //preventDefault: bỏ qua mặt định ban đầu
+                    header.style.height = null
+                    //nếu nó không có menu con thì nó sẽ ẩn menu đi
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>
